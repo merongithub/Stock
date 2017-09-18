@@ -1,0 +1,46 @@
+group 'com.stock'
+version '1.0-SNAPSHOT'
+buildscript {
+    repositories {
+        mavenCentral()
+        jcenter()
+        maven { url 'http://repo.spring.io/libs-release' }
+        maven { url "http://plugins.gradle.org/m2/" }
+    }
+    dependencies {
+
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.5.6.RELEASE")
+    }
+}
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'org.springframework.boot'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+jar {
+    baseName = 'Stock'
+    version =  '0.1.0'
+}
+
+
+repositories {
+    mavenCentral()
+    jcenter()
+    maven { url 'http://repo.spring.io/libs-release' }
+
+}
+
+dependencies {
+    compile("org.springframework.boot:spring-boot-starter-web")
+    // tag::actuator[]
+    compile("org.springframework.boot:spring-boot-starter-actuator")
+    compile("org.apache.logging.log4j:log4j-api")
+    compile("org.apache.logging.log4j:log4j-core")
+    // end::actuator[]
+    // tag::tests[]
+    testCompile("org.springframework.boot:spring-boot-starter-test")
+    // end::tests[]
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
