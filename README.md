@@ -7,6 +7,7 @@ A Rest Application developed by Spring-Boot and Gradle.
 
 Functions
 1. Calculate the monthly average of open and close price of a single or multiple ticker/s.
+
 2.Calculate the maximum profit of a ticker within a month/s. 
 
 Usage.
@@ -14,10 +15,12 @@ Usage.
 This application can run either from web page or Command Line 
 From COMMAND LINE 
  Run the app 
+
 ./gradlew build && java -jar build/libs/gs-spring-boot-0.1.0.jar
  
 Curl Request
 1.Avarage Monthly open and close price 
+
 
 curl "http://localhost:8080/stock?ticker=GOOGL,COF,MSFT&startDate=20170101&endDate=20170601"
 
