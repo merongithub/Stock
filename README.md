@@ -16,7 +16,7 @@ This application can run either from web page or Command Line
 From COMMAND LINE
 Run the app
 
-./gradlew build && java -jar build/libs/gs-spring-boot-0.1.0.jar
+./gradlew build && java -jar build/libs/Stock-0.1.0.jar
 
 Curl Request
 1.Avarage Monthly open and close price
