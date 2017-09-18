@@ -19,12 +19,12 @@ Run the app
 ./gradlew build && java -jar build/libs/Stock-0.1.0.jar
 
 Curl Request
-1.Avarage Monthly open and close price
+1.Average Monthly open and close price
 
 
 curl "http://localhost:8080/stock?ticker=GOOGL,COF,MSFT&startDate=20170101&endDate=20170601"
 
-2.With manximum profite option
+2.With maximum profits option
 
 curl "http://localhost:8080/stock?ticker=GOOGL,COF,MSFT&startDate=20170101&endDate=20170601&opt=max-daily-profit"
 
